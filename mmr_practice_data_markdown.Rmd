@@ -5,26 +5,23 @@ date: "November 21, 2016"
 output: word_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+I examined the extent to which exam grades (E) were predicted by anxiety (A) and preparation (P). As
+indicated in Table 1, when the predictors were examined individually, there was a strong positive
+relation between anxiety and exam grades, r = .68, 95% CI[.62, .72], such that as anxiety increased exam
+grades increased. There was a moderate positive relation between preparation and
+exam grades, r = .53, 95% CI[.46, .59], such that as preparation increased so did exam grades.
 
-## R Markdown
+I used moderated multiple regression to test the extent to which the relation between anxiety and exam
+grades depended on the amount of exam preparation. I assessed this moderation by examining the interaction
+between anxiety and preparation using centered predictors (consistent with the recommendations of Cohen,
+Cohen, West, and Aiken (2003)), see Table 2. Together the predictors (anxiety, preparation, and their
+product) accounted for a all of the variance in exam grades, R2 = .1, 95% CI[1.00, 1.00], p < .001.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The p-value for the anxiety by preparation product term was below .01, t(486) = 219.7, p = > .001, which suggests the presence of an interaction. The simple-slope cross-sections are presented in Figure 1. When preparation was high (i.e., +1 SD) there was a positive relation b = 30.84, 95% CI[30.64, 31.05], t(496) = 295.5, p > .0001. When preparation was low (i.e., -1 SD) there was a negative relation between anxiety and exam grades, b = −0.82,95% CI[-1.02, -.062], t(496) = -.8.05, p < .001, see Equation 2 below.  
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Eˆ = 30.34 + 53.67  (1)
+Eˆ = −0.82A + 40.42 (2)
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
