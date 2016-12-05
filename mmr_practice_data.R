@@ -84,6 +84,7 @@ y.values.at.minus.1SD.z <- predict(interaction.regression,newdata=predictor.x.ra
 line.data <- data.frame(x.axis.range, y.values.at.plus.1SD.z, y.values.at.minus.1SD.z)
 
 ##making a 2D graph (part 2)
+
 #library(ggplot2)
 #set default variables
 my.plot<- ggplot(line.data, aes(x=x.axis.range, y=y.values.at.plus.1SD.z))
